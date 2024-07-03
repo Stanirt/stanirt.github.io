@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小澤的窩 - 關於我</title>
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('fonts/MyCustomFont.eot');
+            src: url('fonts/MyCustomFont.eot?#iefix') format('embedded-opentype'),
+                 url('fonts/MyCustomFont.woff2') format('woff2'),
+                 url('fonts/MyCustomFont.woff') format('woff'),
+                 url('fonts/MyCustomFont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: #333 url('about.jpg') no-repeat  center/cover;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 2px #000;
+        }
+        #showcase p {
+            font-size: 20px;
+            text-shadow: 2px 2px 2px #000;
+        }
+        #main {
+            padding: 20px;
+            background: #fff;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>小澤的窩</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於我</a></li>
+                    <li><a href="contact.html">聯絡我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>關於我</h1>
+            <p>了解更多關於小澤的事～</p>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <h2>個人簡介</h2>
+            <ul>
+                <li>理科生（本科天文物理）</li>
+                <li>熱愛音樂</li>
+                <li>會彈鋼琴（10年啦～）</li>
+                <li>新竹市三民國小（1～2年級）</li>
+                <li>新竹市東門國小資優班（3～6年級）</li>
+                <li>新竹市光華國中數資班（7～9年級）</li>
+            </ul>
+            <h2>我的成果</h2>
+            <ul>
+                <li>英國ABRSM鋼琴檢定2級141分</li>
+                <li>新竹市第41屆國中小科展 國中組數學第一名（w Kevin Chen）</li>
+                <li>科展成發總召/主持人</li>
+                <li>英國ABRSM鋼琴檢定5級141分</li>
+                <li>第36屆科學園遊會總召/主持人/影片剪輯/編劇/導演</li>
+                <li>九資自辦畢旅總召</li>
+            </ul>
+            <h2>關於會考</h2>
+            <ul>
+                <li>5A5+</li>
+                <li>全部差一題～</li>
+                <style>
+                    .exam-results {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 20px;
+                    }
+                    .exam-results th, .exam-results td {
+                        border: 1px solid #ddd;
+                        padding: 8px;
+                        text-align: left;
+                    }
+                    .exam-results th {
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                    }
+                    .exam-results tr:nth-child(even) {
+                        background-color: #f9f9f9;
+                    }
+                </style>
+                
+                <table class="exam-results">
+                    <tr>
+                        <th>科目</th>
+                        <th>答對題數</th>
+                        <th>交卷時間</th>
+                    </tr>
+                    <tr>
+                        <td>國文</td>
+                        <td>39/42</td>
+                        <td>40/70分鐘</td>
+                    </tr>
+                    <tr>
+                        <td>數學</td>
+                        <td>25/25（4/6）</td>
+                        <td>44/80分鐘</td>
+                    </tr>
+                    <tr>
+                        <td>英文</td>
+                        <td>41/43（21/21）</td>
+                        <td>30/60分鐘（25/25分鐘）</td>
+                    </tr>
+                    <tr>
+                        <td>社會</td>
+                        <td>51/54</td>
+                        <td>42/70分鐘</td>
+                    </tr>
+                    <tr>
+                        <td>自然</td>
+                        <td>47/50</td>
+                        <td>42/70分鐘</td>
+                    </tr>
+                    <tr>
+                        <td>作文</td>
+                        <td>五級分</td>
+                        <td>30/50分鐘</td>
+                    </tr>
+                </table>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>小澤的窩 &copy; 2024</p>
+    </footer>
+</body>
+</html>
