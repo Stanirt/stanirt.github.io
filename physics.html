@@ -121,7 +121,7 @@
             background-color: #f4f4f4;
         }
         .stage-button {
-            width: 300px;
+            width: 80%;
             height: 100px;
             border: none;
             border-radius: 10px;
@@ -135,7 +135,7 @@
         }
         .upper-half {
             height: 50%;
-            background-image: url('physics-background.jpg'); /* 替換為您的物化處理圖片 */
+            background-image: url('physics-0.jpg'); /* 替換為您的物化處理圖片 */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -160,9 +160,37 @@
     </style>
 </head>
 <body>
+    <body>
+    <!-- 保留原有的 header -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>小澤的窩</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於我</a></li>
+                    <li><a href="contact.html">聯絡我</a></li>
+                    <li><a href="learning.html">學習區</a></li>
+                    <li><a href="webstie-history.html">更新紀錄</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>物理</h1>
+            <p>物理是一門探索自然界基本規律的科學，通過實驗和理論分析揭示物質、能量及其相互作用的本質。</p>
+        </div>
+    </section>
     <button class="stage-button">
         <div class="upper-half">Stage 0</div>
-        <div class="lower-half">做人要誠懇，帶人要踏實</div>
+        <div class="lower-half">適合零數學基礎，或想純理解現象，而不過度鑽研公式的人選擇。</div>
     </button>
+    <footer>
+        <p>小澤的窩 &copy; 2024</p>
+    </footer>
 </body>
 </html>
