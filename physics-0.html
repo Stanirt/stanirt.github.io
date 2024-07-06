@@ -28,6 +28,37 @@
             margin: auto;
             overflow: hidden;
         }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
         .button-container {
             display: flex;
             justify-content: space-between;
@@ -73,9 +104,58 @@
                 width: calc(50% - 10px);
             }
         }
+        #showcase {
+            min-height: 400px;
+            background: #333 url('physics-0.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 2px #000;
+        }
+        #showcase p {
+            font-size: 20px;
+            text-shadow: 2px 2px 2px #000;
+        }
+        #showcase img {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 100%;
+            height: auto;
+        }
+        #main {
+            padding: 20px;
+            background: #fff;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>小澤的窩</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="learning.html">學習區</a></li>
+                    <li><a href="physics.html">物理</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <div class="button-container">
             <button class="square-button">
@@ -100,5 +180,8 @@
             </button>
         </div>
     </div>
+    <footer>
+        <p>小澤的窩 &copy; 2024</p>
+    </footer>
 </body>
 </html>
