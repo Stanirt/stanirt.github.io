@@ -7,13 +7,20 @@
     <style>
         @font-face {
             font-family: 'MyCustomFont';
-            src: url('MyCustomFont.eot'); /* IE9 Compatibility Modes */
-            src: url('MyCustomFont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                 url('MyCustomFont.woff2') format('woff2'), /* Super Modern Browsers */
-                 url('MyCustomFont.woff') format('woff'), /* Modern Browsers */
-                 url('MyCustomFont.ttf') format('truetype'); /* Safari, Android, iOS */
+            src: url('MyCustomFont.eot');
+            src: url('MyCustomFont.eot?#iefix') format('embedded-opentype'),
+                 url('MyCustomFont.woff2') format('woff2'),
+                 url('MyCustomFont.woff') format('woff'),
+                 url('MyCustomFont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
+        }
+        body {
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         .container {
             width: 80%;
@@ -94,19 +101,11 @@
             gap: 10px;
             margin-top: 20px;
         }
-        body {
-            font-family: 'MyCustomFont';
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
         .stage-button {
             width: 80%;
-            height: 600px;
+            max-width: 600px;
+            height: 300px;
+            margin: 20px auto;
             border: none;
             border-radius: 10px;
             overflow: hidden;
@@ -119,7 +118,7 @@
         }
         .upper-half {
             height: 50%;
-            background-image: url('physics-0.jpg'); /* 替換為您的物化處理圖片 */
+            background-image: url('physics-0.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -144,8 +143,6 @@
     </style>
 </head>
 <body>
-    <body>
-    <!-- 保留原有的 header -->
     <header>
         <div class="container">
             <div id="branding">
@@ -169,14 +166,16 @@
             <p>物理是一門探索自然界基本規律的科學，通過實驗和理論分析揭示物質、能量及其相互作用的本質。</p>
         </div>
     </section>
+    
     <section id="main">
-        <div class="subject buttons">
+        <div class="subject-buttons">
             <button class="stage-button">
                 <div class="upper-half">Stage 0</div>
                 <div class="lower-half">適合零數學基礎，或想純理解現象，而不過度鑽研公式的人選擇。</div>
             </button>
         </div>
     </section>
+
     <footer>
         <p>小澤的窩 &copy; 2024</p>
     </footer>
