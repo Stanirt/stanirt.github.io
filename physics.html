@@ -116,6 +116,13 @@
         .stage-button:hover {
             transform: scale(1.05);
         }
+        .stage-button a {
+            text-decoration: none; /* 移除下劃線 */
+            color: inherit; /* 繼承父元素的顏色 */
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
         .upper-half {
             height: 50%;
             background-image: url('physics-0.jpg');
@@ -171,12 +178,12 @@
     
     <section id="main">
         <div class="subject-buttons">
-            <button class="stage-button">
+            <div class="stage-button">
                 <a href="physics-0.html">
                     <div class="upper-half">Stage 0</div>
                     <div class="lower-half">適合零數學基礎，或想純理解現象，而不過度鑽研公式的人選擇。</div>
                 </a>
-            </button>
+            </div>
         </div>
     </section>
 
