@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小澤的窩－物理</title>
+    <style>
+        body {
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .stage-button {
+            width: 300px;
+            height: 100px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stage-button:hover {
+            transform: scale(1.05);
+        }
+        .upper-half {
+            height: 50%;
+            background-image: url('physics-background.jpg'); /* 替換為您的物化處理圖片 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .lower-half {
+            height: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 16px;
+            padding: 0 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="stage-button">
+        <div class="upper-half">Stage 0</div>
+        <div class="lower-half">做人要誠懇，帶人要踏實</div>
+    </button>
+</body>
+</html>
