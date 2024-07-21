@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube影片下載器</title>
+</head>
+<body>
+    <h1>YouTube影片下載器</h1>
+    <input type="text" id="videoUrl" placeholder="輸入YouTube影片網址">
+    <button onclick="getDownloadLinks()">獲取下載連結</button>
+    <div id="result"></div>
+
+    <script>
+        function getDownloadLinks() {
+            const videoUrl = document.getElementById('videoUrl').value;
+            const videoId = extractVideoId(videoUrl);
+            if (!videoId) {
+                alert('無效的YouTube網址');
+                return;
+            }
+
+            fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${videoId}`, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "youtube-mp36.p.rapidapi.com",
+                    "x-rapidapi-key": "YOUR_RAPIDAPI_KEY"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.link) {
+                    document.getElementById('result').innerHTML = `
+                        <p>標題: ${data.title}</p>
+                        <p>時長: ${data.duration}</p>
+                        <a href="${data.link}" target="_blank">下載MP3</a>
+                    `;
+                } else {
+                    document.getElementById('result').innerHTML = '無法獲取下載連結';
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('result').innerHTML = '發生錯誤,請稍後再試';
+            });
+        }
+
+        function extractVideoId(url) {
+            const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[7].length == 11) ? match[7] : false;
+        }
+    </script>
+</body>
+</html>
