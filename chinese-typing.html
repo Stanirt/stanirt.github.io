@@ -80,10 +80,10 @@
         let totalScore = 0;
 
         const keyboardLayout = [
-            'ㄅㄉˇˋㄓˊ˙ㄚㄞㄢㄦ ',
-            'ㄆㄊㄍㄐㄔㄗㄧㄛㄟㄣ ',
-            'ㄇㄋㄎㄑㄕㄘㄨㄜㄠㄤ ',
-            'ㄈㄌㄏㄒㄖㄙㄩㄝㄡㄥ '
+            'ㄅㄉˇˋㄓˊ˙ㄚㄞㄢㄦ',
+            'ㄆㄊㄍㄐㄔㄗㄧㄛㄟㄣ',
+            'ㄇㄋㄎㄑㄕㄘㄨㄜㄠㄤ',
+            'ㄈㄌㄏㄒㄖㄙㄩㄝㄡㄥ'
         ];
 
         const keyMap = {
@@ -97,7 +97,7 @@
             for (let symbol of row) {
                 const keyElement = document.createElement('div');
                 keyElement.className = 'key';
-                keyElement.textContent = symbol !== ' ' ? symbol : '';
+                keyElement.textContent = symbol;
                 keyboard.appendChild(keyElement);
             }
         });
