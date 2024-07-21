@@ -38,7 +38,7 @@
         }
         #keyboard {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(11, 1fr);
             grid-template-rows: repeat(4, 1fr);
             gap: 5px;
             max-width: 95%;
@@ -93,11 +93,13 @@
             '.':'ㄡ', '0':'ㄢ', 'p':'ㄣ', ';':'ㄤ', '/':'ㄥ', '-':'ㄦ', '3':'ˇ', '4':'ˋ', '6':'ˊ', '7':'˙'
         };
 
-        keyboardLayout.forEach(row => {
-            for (let symbol of row) {
+        keyboardLayout.forEach((row, rowIndex) => {
+            for (let i = 0; i < (rowIndex === 0 ? 11 : 10); i++) {
                 const keyElement = document.createElement('div');
                 keyElement.className = 'key';
-                keyElement.textContent = symbol;
+                if (i < row.length) {
+                    keyElement.textContent = row[i];
+                }
                 keyboard.appendChild(keyElement);
             }
         });
