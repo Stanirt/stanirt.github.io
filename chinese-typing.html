@@ -33,7 +33,6 @@
             justify-content: center;
             align-items: center;
             font-size: 18px;
-            cursor: pointer;
         }
         .highlight {
             background-color: #ffff00;
@@ -62,11 +61,17 @@
         let startTime;
         let totalScore = 0;
 
+        const keyMap = {
+            '1':'ㄅ', 'q':'ㄆ', 'a':'ㄇ', 'z':'ㄈ', '2':'ㄉ', 'w':'ㄊ', 's':'ㄋ', 'x':'ㄌ', 'e':'ㄍ', 'd':'ㄎ', 'c':'ㄏ',
+            'r':'ㄐ', 'f':'ㄑ', 'v':'ㄒ', '5':'ㄓ', 't':'ㄔ', 'g':'ㄕ', 'b':'ㄖ', 'y':'ㄗ', 'h':'ㄘ', 'n':'ㄙ',
+            'u':'ㄧ', 'j':'ㄨ', 'm':'ㄩ', '8':'ㄚ', 'i':'ㄛ', 'k':'ㄜ', ',':'ㄝ', '9':'ㄞ', 'o':'ㄟ', 'l':'ㄠ',
+            '.':'ㄡ', '0':'ㄢ', 'p':'ㄣ', ';':'ㄤ', '/':'ㄥ', '-':'ㄦ'
+        };
+
         symbols.forEach(symbol => {
             const key = document.createElement('div');
             key.className = 'key';
             key.textContent = symbol;
-            key.addEventListener('click', () => checkAnswer(symbol));
             keyboard.appendChild(key);
         });
 
@@ -86,8 +91,8 @@
             startTime = new Date().getTime();
         }
 
-        function checkAnswer(selectedSymbol) {
-            if (selectedSymbol === currentSymbol) {
+        function checkAnswer(inputSymbol) {
+            if (inputSymbol === currentSymbol) {
                 const endTime = new Date().getTime();
                 const timeTaken = (endTime - startTime) / 1000;
                 let points = Math.max(11 - Math.ceil(timeTaken), 1);
@@ -96,6 +101,13 @@
                 updateSymbol();
             }
         }
+
+        document.addEventListener('keydown', (event) => {
+            const inputSymbol = keyMap[event.key.toLowerCase()];
+            if (inputSymbol) {
+                checkAnswer(inputSymbol);
+            }
+        });
 
         updateSymbol();
     </script>
