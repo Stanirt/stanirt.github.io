@@ -38,20 +38,21 @@
         }
         #keyboard {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            max-width: 90%;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+            max-width: 95%;
         }
         .key {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 10px;
+            border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 20px;
             cursor: pointer;
         }
         .highlight {
@@ -79,9 +80,13 @@
         let totalScore = 0;
 
         const keyboardLayout = [
-            'ㄅㄉˇˋ', 'ㄆㄊㄍㄐ', 'ㄇㄋㄎㄑ', 'ㄈㄌㄏㄒ',
-            'ㄓˊ˙ㄚ', 'ㄔㄗㄧㄛ', 'ㄕㄘㄨㄜ', 'ㄖㄙㄩㄝ',
-            'ㄞㄠㄢㄣ', 'ㄟㄡㄤㄥ', 'ㄦ  ', '   '
+            'ㄅㄉˇㄓˊㄚㄞㄢ',
+            'ㄆㄊˋㄔㄗㄛㄟㄣ',
+            'ㄇㄋㄐㄕㄘㄜㄠㄤ',
+            'ㄈㄌㄑㄖㄙㄝㄡㄥ',
+            ' ㄍㄒ ˙ㄧ  ㄦ',
+            ' ㄎ   ㄨ   ',
+            ' ㄏ   ㄩ   '
         ];
 
         const keyMap = {
@@ -91,14 +96,16 @@
             '.':'ㄡ', '0':'ㄢ', 'p':'ㄣ', ';':'ㄤ', '/':'ㄥ', '-':'ㄦ', '3':'ˇ', '4':'ˋ', '6':'ˊ', '7':'˙'
         };
 
-        keyboardLayout.forEach(row => {
-            for (let symbol of row) {
+        for (let col = 0; col < 10; col++) {
+            for (let row = 0; row < 4; row++) {
                 const keyElement = document.createElement('div');
                 keyElement.className = 'key';
-                keyElement.textContent = symbol;
+                if (keyboardLayout[col] && keyboardLayout[col][row]) {
+                    keyElement.textContent = keyboardLayout[col][row];
+                }
                 keyboard.appendChild(keyElement);
             }
-        });
+        }
 
         function getRandomSymbol() {
             return symbols[Math.floor(Math.random() * symbols.length)];
